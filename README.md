@@ -27,7 +27,7 @@ They should be downloaded and on Your machine.*
 ### Training
 For training You would probably want to download the source code by cloning the repository:
 ```
-$ git clone https://github.com/philvec/sentimentPL.git
+$ git clone https://github.com/mcdominik/board_to_fen.git
 ```
 Download training data from:<br>
 I will supply url for data in the future
