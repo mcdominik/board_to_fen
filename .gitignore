@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-board_to_fen.egg-info/
 # C extensions
 *.so
 
@@ -129,3 +128,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+board_to_fen.egg-info/
+.DS_Store
