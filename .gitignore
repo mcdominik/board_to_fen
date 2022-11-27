@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-board_to_fen.egg-info
+board_to_fen.egg-info/
 # C extensions
 *.so
 
