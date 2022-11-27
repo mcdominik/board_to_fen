@@ -17,7 +17,7 @@ $ pip3 install board_to_fen
 ```python
 from board_to_fen.predict import get_fen_from_image
 
-print(get_fen_from_image(path_to_chessboard_image))
+print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 ```
 
 **Note:** *The model uses tensorflow+keras and python-opencv API. 
