@@ -1,10 +1,9 @@
 Metadata-Version: 2.1
 Name: board-to-fen
-Version: 0.0.9
+Version: 0.0.13
 Summary: An package that converts digial chessboard image into Forsyth-Edwards notation
 Home-page: http://pypi.python.org/pypi/board_to_fen/
 Author: Dominik Maćkiewicz
 Author-email: dominik.mackiewicz@icloud.com
 License: MIT
 Requires-Python: >=3.7
-License-File: LICENSE.txt

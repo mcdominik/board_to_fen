@@ -11,7 +11,7 @@ classifiers = [
 
 setup(
    name='board_to_fen',
-   version='0.0.9',
+   version='0.0.13',
    author='Dominik Maćkiewicz',
    author_email='dominik.mackiewicz@icloud.com',
    packages=find_packages(),
@@ -21,6 +21,7 @@ setup(
    description='An package that converts digial chessboard image into Forsyth-Edwards notation',
    long_description=open('README.md').read(),
    include_package_data=True,
-   python_requires='>=3.7'
-   
+
+   python_requires='>=3.7',
+   install_requires=['pillow']
 )

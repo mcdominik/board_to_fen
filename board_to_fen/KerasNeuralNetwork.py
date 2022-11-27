@@ -4,6 +4,7 @@ with redirect_stderr(open(os.devnull, "w")):
     from keras import models, layers
 import numpy as np
 
+
 class KerasNeuralNetwork:
     def __init__(self) -> None:
         self.CATEGORIES = ["bishop_black", "bishop_white","empty","king_black","king_white","knight_black", "knight_white","pawn_black", "pawn_white", "queen_black","queen_white", "rook_black","rook_white"]
@@ -36,7 +37,8 @@ class KerasNeuralNetwork:
     def predict(self, tiles) -> list:
         for image in tiles:
             image = np.array(image)
-            prediction = self.model.predict([[image]])
+            image = np.reshape(image, ((1, 50, 50, 3)))
+            prediction = self.model.predict(image, verbose=0)
             index = np.argmax(prediction)
             self.predictions.append(self.CATEGORIES[index])
         return self.predictions
