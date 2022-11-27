@@ -15,7 +15,7 @@ $ pip3 install board_to_fen
 
 ### Quick Start
 ```python
-from board_to_fen.predcit import get_fen_from_image
+from board_to_fen.predict import get_fen_from_image
 
 print(get_fen_from_image(path_to_chessboard_image))
 ```
