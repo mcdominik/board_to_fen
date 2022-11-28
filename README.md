@@ -20,8 +20,8 @@ from board_to_fen.predict import get_fen_from_image
 print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 ```
 
-**Note:** *The model uses tensorflow+keras and python-opencv API. 
-They should be downloaded and on Your machine.*
+**Note:** *The package uses tensorflow+keras and python-opencv API. 
+They should be downloaded on Your machine.*
 
 
 ### Training
