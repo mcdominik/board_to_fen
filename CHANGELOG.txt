@@ -1,0 +1,8 @@
+===============================
+november 2022
+    version 0.0.0-0.0.13
+     - fixing problems related with publishing on pypi
+================================
+december 2022
+    version 0.0.14
+    - added automatic resizing (now image can have any size)
