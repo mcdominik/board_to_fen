@@ -91,8 +91,9 @@ class Tiler:
         pass
 
     def get_tiles(self, image_path, d=50) -> list:
-        img = Image.open(image_path)
-        img = img.resize((400,400))
+        img = cv2.imread(image_path)
+        img = cv2.resize(img, dsize=(400, 400), interpolation=cv2.INTER_CUBIC)
+        img = Image.fromarray(img).convert('RGB')
         w, h = img.size
         grid = product(range(0, h-h%d, d), range(0, w-w%d, d))
         for i, j in grid:
