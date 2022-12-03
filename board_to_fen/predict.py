@@ -1,9 +1,6 @@
 import io
 from .KerasNeuralNetwork import KerasNeuralNetwork
 from .utils import Decoder_FEN, Tiler
-# from KerasNeuralNetwork import KerasNeuralNetwork
-# from utils import Decoder_FEN, Tiler
-
 try:
     import importlib.resources as pkg_resources
 except ImportError:
