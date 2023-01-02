@@ -23,6 +23,9 @@ print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 **Note:** *The package uses tensorflow+keras and python-opencv API. 
 They should be downloaded on Your machine. I did't put it in install_requires because you can use conda's.*
 
+### Web version
+Available at: http://srv16.mikr.us:20231
+
 
 ### Training
 For training You would probably want to download the source code by cloning the repository:
