@@ -24,7 +24,7 @@ print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 They should be downloaded on Your machine. I did't put it in install_requires because you can use conda's.*
 
 ### Web version
-Available at: http://srv16.mikr.us:20231
+Available at: https://board2fen.bieda.it
 
 
 ### Training
