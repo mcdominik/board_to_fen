@@ -6,3 +6,8 @@ november 2022
 december 2022
     version 0.0.14
     - added automatic resizing (now image can have any size)
+===============================
+january 2023
+    version 0.0.14-0.0.16
+     - fixing problems related with github actions
+================================
