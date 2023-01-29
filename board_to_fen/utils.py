@@ -57,7 +57,6 @@ class Decoder_FEN():
             if square != 'empty':
                 figures +=1
         print(f'figures:{figures}')
-        print(f'len figures:{len(figures)}')
         print(f'kb:{count_king_black}')
         print(f'kw:{count_king_white}')
         if ((count_king_black != 1) or (count_king_white != 1) or ((figures) > 32)):
