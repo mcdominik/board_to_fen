@@ -36,7 +36,7 @@ class Decoder_FEN():
         squeezed = re.sub('11', '2', filtered)
         return squeezed
 
-    def _simple_validator(self, squares) -> None:
+    def _simple_validator(self, squares):
         ''' ensures that model:
             - found only one white king
             - found only one black king
@@ -61,7 +61,9 @@ class Decoder_FEN():
         print(f'kb:{count_king_black}')
         print(f'kw:{count_king_white}')
         if ((count_king_black != 1) or (count_king_white != 1) or ((figures) > 32)):
-            raise InvalidChessboardLayout()
+            # raise InvalidChessboardLayout()
+            return 'invalid'
+        return 'ok'
 
 
 
@@ -69,9 +71,11 @@ class Decoder_FEN():
 
 
     def fen_decode(self, squares, end_of_row='/', black_view=False) -> str:
-        try:
-            self._simple_validator(squares)
-        except Exception as E:
+        # try:
+        #     self._simple_validator(squares)
+        # except Exception as E:
+        #     return 'Model can\'t find valid chessboard layout'
+        if (self._simple_validator(squares) == 'invalid'):
             return 'Model can\'t find valid chessboard layout'
         long_fen = ''
         for i, square in enumerate(squares):
