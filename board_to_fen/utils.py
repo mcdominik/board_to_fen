@@ -56,8 +56,10 @@ class Decoder_FEN():
                 count_king_black+=1
             if square != 'empty':
                 figures +=1
-        
-        if ((count_king_black != 1) or (count_king_white != 1) or (len(figures)>32)):
+        print(figures)
+        print(count_king_black)
+        print(count_king_white)
+        if ((count_king_black != 1) or (count_king_white != 1) or (len(figures) > 32)):
             raise InvalidChessboardLayout()
 
 
