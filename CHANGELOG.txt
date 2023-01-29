@@ -12,6 +12,7 @@ january 2023
      - fixing problems related with github actions
 ================================
 january 2023
-    version 0.0.17
+    version 0.0.17-18
+     - bug fixes
      - added simple board validation
 ================================
