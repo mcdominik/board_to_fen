@@ -19,4 +19,3 @@ def get_fen_from_image(image_path, end_of_row='/', black_view=False) -> str:
     predictions = net.predict(tiles=tiles)
     fen = decoder.fen_decode(figures=predictions, end_of_row=end_of_row, black_view=black_view)
     return fen
-

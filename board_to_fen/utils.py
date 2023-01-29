@@ -36,7 +36,38 @@ class Decoder_FEN():
         squeezed = re.sub('11', '2', filtered)
         return squeezed
 
+    def _simple_validator(self, figures) -> None:
+        ''' ensures that model:
+            - found only one white king
+            - found only one black king
+            - number of pieces is not greater than 32
+
+        Args:
+        figures: list of figures before decoding
+        '''
+        count_king_white = 0
+        count_king_black = 0
+
+
+        for figure in figures:
+            if figure == 'king_white':
+                count_king_white+=1
+            if figure == 'king_black':
+                count_king_black+=1
+        
+        if ((count_king_black and count_king_white != 1) or (len(figures)>32)):
+            raise InvalidChessboardLayout()
+
+
+
+
+
+
     def fen_decode(self, figures, end_of_row='/', black_view=False) -> str:
+        try:
+            self._simple_validator(figures)
+        except Exception as E:
+            return 'Model can\'t find valid chessboard layout'
         long_fen = ''
         for i, figure in enumerate(figures):
             if i % 8 == 0 and i>0:
@@ -46,6 +77,7 @@ class Decoder_FEN():
             if black_view:
                 fen = fen[::-1]
         return fen
+    
 
 
 class DataFetcher:
@@ -101,3 +133,8 @@ class Tiler:
             self.tile_images.append(img.crop(box))
         return self.tile_images
 
+
+class InvalidChessboardLayout(Exception):
+    '''Raise exception if chessboard prediction has
+       invalid layout, for example more than 2 kings or 
+       more than 32 pieces'''
