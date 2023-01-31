@@ -6,6 +6,7 @@ import re
 from PIL import Image
 from itertools import product
 
+
 LEGEND = {
     'pawn_white' : 'P',
     'pawn_black' : 'p',
@@ -62,10 +63,6 @@ class Decoder_FEN():
         if ((count_king_black != 1) or (count_king_white != 1) or ((figures) > 32)):
             return 'invalid'
 
-
-
-
-
     def fen_decode(self, squares, end_of_row='/', black_view=False) -> str:
         if (self._simple_validator(squares) == 'invalid'):
             return 'Model can\'t find valid chessboard layout'
@@ -78,7 +75,6 @@ class Decoder_FEN():
             if black_view:
                 fen = fen[::-1]
         return fen
-    
 
 
 class DataFetcher:
@@ -118,6 +114,7 @@ class DataFetcher:
         test_labels = self.labels[pivot:]
         return train_images, train_labels, test_images, test_labels
 
+
 class Tiler:
     def __init__(self) -> None:
         self.tile_images = []
@@ -133,9 +130,3 @@ class Tiler:
             box = (j, i, j+d, i+d)
             self.tile_images.append(img.crop(box))
         return self.tile_images
-
-
-class InvalidChessboardLayout(Exception):
-    '''Raise exception if chessboard prediction has
-       invalid layout, for example more than 2 kings or 
-       more than 32 pieces'''
