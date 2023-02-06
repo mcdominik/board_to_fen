@@ -24,6 +24,15 @@ print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 **Note:** *The package uses tensorflow+keras and python-opencv API. 
 They are pretty heavy.*
 
+### Customization
+
+get_fen_from_image takes has 3 arguments:
+
+- image_path [required]
+- end_of_row '/' by default 
+- black_view False by default -> set True if chessboard is provided from black player perspective
+
+
 ### Web version (currently may not work)
 Available at: https://board2fen.bieda.it
 
@@ -43,8 +52,15 @@ $ python3 ./board_to_fen/train_model.py
 
 ### Version history
 
-#### v.0.0.1-13 latest
-fix path (upload related) bugs 
+- january 2023
+     - versions 0.0.17-25
+     - added simple board validation
+     - bug fixes
+
+## Warnings
+- Image has to be provided in neutral angle (white or black player's perspective).
+- Image has to be square (~3% tolerance depending on image resolution).
+- Image can't contain paddings, board borders etc. other than 64 squares (with pieces) itself.
 
 
 ### References:
