@@ -3,10 +3,10 @@
 
 Python package that converts digital chessboard image into Forsyth-Edwards notation (FEN) notation
 
+[![Downloads](https://static.pepy.tech/badge/board-to-fen)](https://pepy.tech/project/board-to-fen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyPI](https://img.shields.io/pypi/v/board_to_fen)](https://pypi.org/project/board_to_fen/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/mcdominik/board_to_fen)](https://github.com/mcdominik/board_to_fen)
-[![Downloads](https://static.pepy.tech/badge/board-to-fen)](https://pepy.tech/project/board-to-fen)
 
 ### Installation
 board_to_fen is available on PyPI:
