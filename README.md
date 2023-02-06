@@ -24,7 +24,7 @@ print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
 **Note:** *The package uses tensorflow+keras and python-opencv API. 
 They are pretty heavy.*
 
-### Web version
+### Web version (currently may not work)
 Available at: https://board2fen.bieda.it
 
 
