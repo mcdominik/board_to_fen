@@ -16,17 +16,29 @@ $ pip3 install board_to_fen
 
 ### Quick Start
 ```python
-from board_to_fen.predict import get_fen_from_image
+from board_to_fen.predict import get_fen_from_image_path
 
-print(get_fen_from_image(PATH_TO_CHESSBOARD_IMAGE))
+print(get_fen_from_image_path(PATH_TO_CHESSBOARD_IMAGE))
 ```
 
-**Note:** *The package uses tensorflow+keras and python-opencv API. 
+or, if you want you can load image object by yourself:
+
+```python
+from PIL import Image
+from board_to_fen.predict import get_fen_from_image
+
+img = Image.open(PATH_TO_CHESSBOARD_IMAGE)
+
+print(get_fen_from_image(img))
+```
+
+
+**Note:** *The package uses tensorflow+keras API. 
 They are pretty heavy.*
 
 ### Customization
 
-get_fen_from_image takes has 3 arguments:
+get_fen_from_image_path takes has 3 arguments:
 
 - image_path [required]
 - end_of_row '/' by default 
