@@ -17,8 +17,10 @@ january 2023
      - bug fixes
 ================================
 ================================
-january 2023
-    version 0.0.26
+february 2023
+    version 0.1.0-0.1.1
      - migratation from cv2 to PIL
      - new function for direct image object load
+     - add simple tests
+     - bug fixes
 ================================

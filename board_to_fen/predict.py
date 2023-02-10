@@ -17,7 +17,7 @@ def get_fen_from_image_path(image_path, end_of_row='/', black_view=False) -> str
     f = pkg_resources.open_text(saved_models, 'november_model')
     net.load_model(f.name)
     tiler = Tiler()
-    tiles = tiler.get_tiles(image=image)
+    tiles = tiler.get_tiles(img=image)
     predictions = net.predict(tiles=tiles)
     fen = decoder.fen_decode(squares=predictions, end_of_row=end_of_row, black_view=black_view)
     return fen
@@ -28,7 +28,7 @@ def get_fen_from_image(image, end_of_row='/', black_view=False) -> str:
     f = pkg_resources.open_text(saved_models, 'november_model')
     net.load_model(f.name)
     tiler = Tiler()
-    tiles = tiler.get_tiles(image=image)
+    tiles = tiler.get_tiles(img=image)
     predictions = net.predict(tiles=tiles)
     fen = decoder.fen_decode(squares=predictions, end_of_row=end_of_row, black_view=black_view)
     return fen
