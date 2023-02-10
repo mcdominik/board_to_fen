@@ -11,7 +11,7 @@ classifiers = [
 
 setup(
    name='board_to_fen',
-   version='0.1.0',
+   version='0.1.1',
    author='Dominik Maćkiewicz',
    author_email='dominik.mackiewicz@icloud.com',
    packages=find_packages(),
