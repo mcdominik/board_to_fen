@@ -1,6 +1,5 @@
 import os
 import numpy as np
-import cv2
 import random
 import re
 from PIL import Image
@@ -57,9 +56,6 @@ class Decoder_FEN():
                 count_king_black+=1
             if square != 'empty':
                 figures +=1
-        print(f'figures:{figures}')
-        print(f'kb:{count_king_black}')
-        print(f'kw:{count_king_white}')
         if ((count_king_black != 1) or (count_king_white != 1) or ((figures) > 32)):
             return 'invalid'
 
@@ -90,8 +86,8 @@ class DataFetcher:
             class_num = self.CATEGORIES.index(category)
             for filename in os.listdir(path):
                 try:
-                    img = cv2.imread(os.path.join(path,filename))
-                    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                    img = Image.open(os.path.join(path,filename)).convert('RGB')
+                    ima = np.array(img)
                     #consider division /255
                     self.data.append([img/255, class_num])
                 except Exception as e:
@@ -120,10 +116,8 @@ class Tiler:
         self.tile_images = []
         pass
 
-    def get_tiles(self, image_path, d=50) -> list:
-        img = cv2.imread(image_path)
-        img = cv2.resize(img, dsize=(400, 400), interpolation=cv2.INTER_CUBIC)
-        img = Image.fromarray(img).convert('RGB')
+    def get_tiles(self, img, d=50) -> list:
+        img = img.resize((400,400), Image.NEAREST).convert('RGB')
         w, h = img.size
         grid = product(range(0, h-h%d, d), range(0, w-w%d, d))
         for i, j in grid:

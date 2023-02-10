@@ -1,18 +1,24 @@
 ===============================
 november 2022
     version 0.0.0-0.0.13
-     - fixing problems related with publishing on pypi
+     - fix problems related with publishing on pypi
 ================================
 december 2022
     version 0.0.14
-    - added automatic resizing (now image can have any size)
+    - add automatic resizing (now image can have any size)
 ===============================
 january 2023
     version 0.0.14-0.0.16
-     - fixing problems related with github actions
+     - fix problems related with github actions
 ================================
 january 2023
-    version 0.0.17-24
-     - added simple board validation
+    version 0.0.17-25
+     - add simple board validation
      - bug fixes
+================================
+================================
+january 2023
+    version 0.0.26
+     - migratation from cv2 to PIL
+     - new function for direct image object load
 ================================
