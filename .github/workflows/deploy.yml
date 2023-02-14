@@ -1,5 +1,5 @@
 name: deploy
-
+needs: pytest
 on:
   push:
     branches:
