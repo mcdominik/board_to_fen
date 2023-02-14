@@ -134,3 +134,4 @@ board_to_fen.egg-info/
 DS_Store
 board_to_fen/.DS_Store
 */__pycache__
+*/*/__pycache__
