@@ -11,7 +11,7 @@ Python package that converts digital chessboard image into Forsyth-Edwards notat
 ### Installation
 board_to_fen is available on PyPI:
 ```
-$ pip3 install board_to_fen
+pip3 install board_to_fen
 ```
 
 ### Quick Start
