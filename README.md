@@ -69,6 +69,13 @@ $ python3 ./board_to_fen/train_model.py
      - added simple board validation
      - bug fixes
 
+- february 2023
+    version 0.1.0-0.1.1
+     - migratation from cv2 to PIL
+     - new function for direct image object load
+     - add simple tests
+     - bug fixes
+
 ## Warnings
 - Image has to be provided in neutral angle (white or black player's perspective).
 - Image has to be square (~3% tolerance depending on image resolution).
